@@ -1,0 +1,31 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class ProductController extends Controller
+{
+    public function index()
+    {
+        $products = [
+            [
+                "title" => "Inception",
+                "director" => "Christopher Nolan",
+                "year" => 2010
+            ],
+            [
+                "title" => "Avengers: Endgame",
+                "director" => "Anthony & Joe Russo",
+                "year" => 2019
+            ],
+            [
+                "title" => "Parasite",
+                "director" => "Bong Joon-ho",
+                "year" => 2019
+            ]
+        ];
+
+        return view('products', compact('products'));
+    }
+}
